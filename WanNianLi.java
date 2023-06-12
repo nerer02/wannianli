@@ -10,9 +10,12 @@ import java.io.InputStreamReader;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import 万.LunarData;
+import java.util.Scanner;
 
 public class WanNianLi {
-    public static void main(String[] args) {
+    private static Scanner input;
+
+	public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         int year;//定义年份
         int month;//定义月份
@@ -281,8 +284,7 @@ public class WanNianLi {
                     // do something with lunar
                 } else {
                     // handle invalid year
-                }
-                
+                }          
                 //获取闰月的月份，如果为0表示没有闰月
                 int leapMonth = data >> 16;
                 
