@@ -9,6 +9,7 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+import 万.LunarData;
 
 public class WanNianLi {
     public static void main(String[] args) {
@@ -275,7 +276,12 @@ public class WanNianLi {
                 boolean isLeapMonth = false;
                 
                 //定义一个整数变量，存储1900年的农历数据
-                int data = lunarData[year - 1900];
+                if (year >= 1900 && year <= 2099) {
+                    int[] lunar = LunarData.lunarInfo[year - 1900];
+                    // do something with lunar
+                } else {
+                    // handle invalid year
+                }
                 
                 //获取闰月的月份，如果为0表示没有闰月
                 int leapMonth = data >> 16;
